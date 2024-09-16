@@ -10,5 +10,12 @@ The output will can be seen in the terminal
 
 Added Dockerfile
 
+Added HealthCheck and Metrics
+
+
+Paths For Game Play -> /play
+Heathcheck -> /heathz
+Metrics -> /metrics
+
 
 

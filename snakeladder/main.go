@@ -9,16 +9,15 @@ import (
 )
 
 func main() {
-	gameEngine := engine.InitEngine(1,1,100)
-	
-	
+	gameEngine := engine.InitEngine(1, 1, 100)
+
 	gameEngine.AddPlayer("Ram")
 	gameEngine.AddPlayer("Shyam")
 
 	api.SetGameEngine(gameEngine)
 
 	//settingup router
-	r := api.SetupRouter() 
+	r := api.SetupRouter()
 
 	//starting server
 	port := "8080"
@@ -27,4 +26,5 @@ func main() {
 	if err != nil {
 		fmt.Println("Error starting the server: ", err)
 	}
+
 }

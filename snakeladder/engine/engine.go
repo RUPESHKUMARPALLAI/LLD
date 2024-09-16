@@ -3,12 +3,15 @@ package engine
 import (
 	"fmt"
 
+	"github.com/snakeladder/metrics"
+
 	"github.com/snakeladder/model"
 )
 
 func (engine *Engine) AddPlayer(name string) {
 	p := model.InitPlayer(name)
 	engine.players = append(engine.players, p)
+	metrics.IncreamentPlayerCount(name)
 }
 
 func (engine *Engine) Play() {
