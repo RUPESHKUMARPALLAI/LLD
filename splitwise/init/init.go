@@ -31,6 +31,7 @@ func Initialize() {
 
 	// Create expenses
 	expense1 := expenseService.CreateExpense("e1", user1, 100.0, []*model.User{user1, user2, user3}, "2024-09-24")
+	utils.ExpensesStore["e1"] = expense1
 	expenseService.AddExpenseToGroup(group, expense1)
 
 	fmt.Println("Initialization completed successfully!")

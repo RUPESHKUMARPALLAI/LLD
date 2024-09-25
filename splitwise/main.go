@@ -24,6 +24,10 @@ func main() {
 
 	// Fetch the first expense (simulated database retrieval)
 	expense := utils.GetExpenseByID("e1")
+	if expense == nil {
+		panic("Expense with ID e1 not found!")
+	}
+	
 
 	// Split the expense and log the debts
 	debts := expenseService.SplitExpense(expense)
